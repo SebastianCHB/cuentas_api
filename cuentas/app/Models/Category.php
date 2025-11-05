@@ -14,9 +14,9 @@ class Category extends Model
 
     protected $guarded = [];
 
-    public function user(): BelongsTo
-    {
-        return $this->belongsTo(User::class);
+    public function user(){
+    
+        return $this-> hasOne (User::class);
     }
 
     public function transactions(): HasMany
