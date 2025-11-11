@@ -10,7 +10,7 @@ use App\Http\Controllers\TransactionsController;
 
 Route::post('/login',[AuthController::class, 'login']);
 
-Route::middleware("auth:api")->group(function(){
+Route::middleware("jwt")->group(function(){
 Route::resource('accounts', AccountsController::class);
 Route::resource('categories', CategoriesController::class);
 Route::resource('transactions', TransactionsController::class);
